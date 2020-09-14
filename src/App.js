@@ -1,11 +1,22 @@
 import React, { useState } from "react";
 import SVG from "./svg";
-import Todo from "./todo";
+import TodoList from "./todolist";
 
 import "./css/style.css";
 
 function App() {
-  const [todos, setTodos] = useState([{ name: "", checked: false }]);
+  const [todos, setTodos] = useState([]);
+  const [todo, setTodo] = useState("");
+
+  const handleChange = (e) => {
+    setTodo(e.target.value);
+  };
+  const handleAddTodo = (e) => {
+    e.preventDefault();
+    setTodos([...todos, { title: todo, checked: false, id: Date.now() }]);
+    setTodo("");
+  };
+
   return (
     <div className="App">
       <header>
@@ -27,15 +38,14 @@ function App() {
               <div className="todo-input">
                 <input
                   type="text"
-                  name="todoinput"
+                  value={todo}
+                  onChange={(e) => handleChange(e)}
                   placeholder="Type todo..."
                 />
-                <button>Add</button>
+                <button onClick={(e) => handleAddTodo(e)}>Add</button>
               </div>
               <div className="todos-list">
-                {todos.map((todo, i) => (
-                  <Todo key={i} todo={todo} />
-                ))}
+                <TodoList todos={todos} setTodos={setTodos} />
               </div>
             </div>
           </div>

@@ -18,11 +18,7 @@ const SVG = () => (
           x2="880.14"
           y2="274.88"
           gradientUnits="userSpaceOnUse"
-        >
-          <stop offset="0" stop-color="gray" stop-opacity="0.25" />
-          <stop offset="0.54" stop-color="gray" stop-opacity="0.12" />
-          <stop offset="1" stop-color="gray" stop-opacity="0.1" />
-        </linearGradient>
+        ></linearGradient>
       </defs>
       <title>to do list</title>
       <path
