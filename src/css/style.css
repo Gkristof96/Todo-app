@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: #eaf6f6;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 98rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.logo {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo h1 {
+  margin-left: 1rem;
+}
+
+.image-wrapper {
+  width: 60%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.image-wrapper svg {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
+
+.todo-wrapper {
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todo-wrapper .todo-card {
+  background-color: #fff;
+  border-radius: 25px;
+  height: 80%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-wrapper .todo-card .title {
+  padding: 1rem 0;
+}
+
+.todo-wrapper .todo-card .todo-input {
+  width: 80%;
+}
+
+.todo-wrapper .todo-card .todo-input input {
+  height: 50px;
+  width: 75%;
+  max-width: 300px;
+  background-color: #eaf6f6;
+  border: none;
+  border-radius: 10px;
+  color: #bdbdbd;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.todo-wrapper .todo-card .todo-input input:focus {
+  outline: none;
+}
+
+.todo-wrapper .todo-card .todo-input button {
+  margin-left: 5%;
+  width: 20%;
+  max-width: 70px;
+  height: 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #212121;
+  background-color: #f76b8a;
+  border: none;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+
+section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80%;
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=style.css.map */
