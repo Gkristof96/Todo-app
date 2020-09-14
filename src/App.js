@@ -13,8 +13,11 @@ function App() {
   };
   const handleAddTodo = (e) => {
     e.preventDefault();
-    setTodos([...todos, { title: todo, checked: false, id: Date.now() }]);
-    setTodo("");
+    if (todo.length > 0) {
+      setTodos([...todos, { title: todo, checked: false, id: Date.now() }]);
+      setTodo("");
+    }
+    return null;
   };
 
   return (
@@ -44,6 +47,7 @@ function App() {
                 />
                 <button onClick={(e) => handleAddTodo(e)}>Add</button>
               </div>
+              <div className="line"> </div>
               <div className="todos-list">
                 <TodoList todos={todos} setTodos={setTodos} />
               </div>
