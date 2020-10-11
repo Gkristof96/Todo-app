@@ -128,15 +128,16 @@ section .container .todo-wrapper .todo-card .title {
 section .container .todo-wrapper .todo-card .todo-input {
   width: 80%;
   max-width: 375px;
+  background-color: #eaf6f6;
   position: relative;
+  border-radius: 10px;
 }
 
 section .container .todo-wrapper .todo-card .todo-input input {
   height: 50px;
-  width: 100%;
-  background-color: #eaf6f6;
+  width: 80%;
+  background-color: transparent;
   border: none;
-  border-radius: 10px;
   color: #212121;
   padding: 1rem;
   font-size: 1rem;
@@ -170,7 +171,7 @@ section .container .todo-wrapper .todo-card .line {
   width: 80%;
   max-width: 375px;
   height: 2px;
-  margin: 0.5rem 0 0;
+  margin: 0.5rem 0;
   background-color: #66bfbf;
 }
 
@@ -183,7 +184,6 @@ section .container .todo-wrapper .todo-card .todos-list {
 
 section .container .todo-wrapper .todo-card .todos-list .todo {
   width: 99%;
-  height: 50px;
   border-radius: 10px;
   background-color: #eaf6f6;
   display: -webkit-box;
@@ -199,7 +199,7 @@ section .container .todo-wrapper .todo-card .todos-list .todo {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   margin: 0.5rem 0;
-  padding: 0 0.5rem;
+  padding: 10px 0.5rem;
 }
 
 section .container .todo-wrapper .todo-card .todos-list .todo h2 {
@@ -217,6 +217,9 @@ section .container .todo-wrapper .todo-card .todos-list .todo h2.unchecked {
 }
 
 section .container .todo-wrapper .todo-card .todos-list .todo .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import { ImCheckboxChecked, ImCheckboxUnchecked, ImBin } from "react-icons/im";
 
-const Todo = ({ title, checked, todo, id, todos, setTodos }) => {
+const Todo = ({ title, checked, id, todos, setTodos }) => {
   const handleCheck = () => {
     setTodos(
       todos.map((item) => {
-        if (item.id === todo.id) {
+        if (item.id === id) {
           return { ...item, checked: !item.checked };
         }
         return item;

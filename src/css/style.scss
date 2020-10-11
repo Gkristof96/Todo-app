@@ -101,13 +101,15 @@ section {
         .todo-input {
           width: 80%;
           max-width: 375px;
+          background-color: color(background);
           position: relative;
+          border-radius: 10px;
           input {
             height: 50px;
-            width: 100%;
-            background-color: color(background);
+            width: 80%;
+            background-color: transparent;
             border: none;
-            border-radius: 10px;
+            
             color: color(primary-text);
             padding: 1rem;
             font-size: 1rem;
@@ -140,7 +142,7 @@ section {
           width: 80%;
           max-width: 375px;
           height: 2px;
-          margin: 0.5rem 0 0;
+          margin: 0.5rem 0;
           background-color: color(primary);
         }
         .todos-list {
@@ -150,7 +152,6 @@ section {
           overflow: auto;
           .todo {
             width: 99%;
-            height: 50px;
             border-radius: 10px;
             background-color: color(background);
             display: flex;
@@ -159,7 +160,7 @@ section {
             font-size: 0.7rem;
             transition: 0.3s ease-in-out;
             margin: 0.5rem 0;
-            padding: 0 0.5rem;
+            padding: 10px 0.5rem;
             h2 {
               transition: 0.3s ease-in-out;
               &.checked {
@@ -171,6 +172,7 @@ section {
               }
             }
             .btns {
+              display: flex;
               transition: 0.5s ease-in-out;
               .del,
               .check {
