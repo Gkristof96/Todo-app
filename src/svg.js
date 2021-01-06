@@ -1,14 +1,21 @@
 import React from "react";
+import { motion } from 'framer-motion'
+import { svgSwim, transitionTwo } from './animations'
 
 const SVG = () => (
   <>
-    <svg
+    <motion.svg
       id="59904e4f-d552-4f96-882a-6a294bb87dd0"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       width="1155.41"
       height="796.48"
       viewBox="0 0 1155.41 796.48"
+      initial='out'
+      animate='in'
+      exit='out'
+      variants={svgSwim}
+      transition={transitionTwo}
     >
       <defs>
         <linearGradient
@@ -790,7 +797,7 @@ const SVG = () => (
         points="188.04 691.77 187.62 695.2 127.41 695.2 126.99 691.77 188.04 691.77"
         fill="#9d9cb5"
       />
-    </svg>
+    </motion.svg>
   </>
 );
 

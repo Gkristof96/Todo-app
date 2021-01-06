@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import SVG from "./svg";
 import TodoList from "./todolist";
+import { motion } from 'framer-motion'
+import { textSwim, transitionOne } from './animations'
 
 import "./css/style.css";
 
@@ -36,7 +38,14 @@ function App() {
             <SVG />
           </div>
           <div className="todo-wrapper">
-            <div className="todo-card">
+            <motion.div
+              className="todo-card"
+              initial='out'
+              animate='in'
+              exit='out'
+              variants={textSwim}
+              transition={transitionOne}
+            >
               <h1 className="title">Todos</h1>
               <div className="todo-input">
                 <input
@@ -51,7 +60,7 @@ function App() {
               <div className="todos-list">
                 <TodoList todos={todos} setTodos={setTodos} />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
