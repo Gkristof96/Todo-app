@@ -8,7 +8,8 @@ import "./css/style.css";
 import Header from "./components/Header";
 
 function App() {
-  const data = JSON.parse(localStorage.getItem('todos'))
+  const todoJSON = localStorage.getItem('todos')
+  const data = todoJSON ? JSON.parse(todoJSON) : []
   const [todos, setTodos] = useState(data);
   const [todo, setTodo] = useState("");
 
