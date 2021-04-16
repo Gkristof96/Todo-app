@@ -52,7 +52,7 @@ function App() {
               variants={textSwim}
               transition={transitionOne}
             >
-              <h1 className="title">Todos</h1>
+              <h1 className="card-title">Todos</h1>
               <div className="todo-input">
                 <input
                   type="text"
@@ -62,7 +62,7 @@ function App() {
                 />
                 <button onClick={(e) => addNewTodo(e)}>Add</button>
               </div>
-              <div className="line"> </div>
+              <div className="horizontal-line"> </div>
               <div className="todos-list">
                 <TodoList todos={todos} setTodos={setTodos} />
               </div>

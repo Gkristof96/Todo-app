@@ -16,22 +16,22 @@ const Todo = ({ title, isTodoChecked, id, todos, setTodos }) => {
     setTodos(todos.filter((el) => el.id !== id));
   };
   return (
-    <div className="todo">
+    <div className="todo-container">
       <h2 className={isTodoChecked ? "checked" : "unchecked"}>{title}</h2>
-      <div className="btns">
+      <div className="btn-container">
         {isTodoChecked && 
           <ImBin 
-            className="del" 
+            className="del-btn" 
             onClick={() => removeTodo()} 
           />}
         {isTodoChecked ? (
           <ImCheckboxChecked
-            className="check"
+            className="check-btn"
             onClick={() => handleCheckTodo()}
           />
         ) : (
           <ImCheckboxUnchecked
-            className="check"
+            className="check-btn"
             onClick={() => handleCheckTodo()}
           />
         )}
