@@ -3,12 +3,10 @@ import React from 'react'
 const Header = () => {
     return (
         <header>
-                <div className="container">
-                    <div className="logo">
-                        <img src="todo.png" alt="todo" />
-                        <h1>Todo app</h1>
-                    </div>
-                </div>
+            <div className="logo">
+                <img src="todo.png" alt="todo" />
+                <h1><span>Todo</span> App</h1>
+            </div>
         </header>
     )
 }

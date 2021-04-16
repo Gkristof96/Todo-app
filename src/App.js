@@ -40,7 +40,6 @@ function App() {
     <div className="App">
       <Header />
       <section>
-        <div className="container">
           <div className="image-wrapper">
             <SVG />
           </div>
@@ -69,7 +68,6 @@ function App() {
               </div>
             </motion.div>
           </div>
-        </div>
       </section>
     </div>
   );
