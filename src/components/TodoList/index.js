@@ -1,5 +1,5 @@
 import React from "react";
-import Todo from "./todo";
+import Todo from '../Todo';
 
 const TodoList = ({ todos, setTodos }) => {
   return (
@@ -9,7 +9,7 @@ const TodoList = ({ todos, setTodos }) => {
           key={todo.id}
           id={todo.id}
           title={todo.title}
-          checked={todo.checked}
+          isTodoChecked={todo.checked}
           todos={todos}
           todo={todo}
           setTodos={setTodos}

@@ -1,8 +1,8 @@
 import React from "react";
 import { ImCheckboxChecked, ImCheckboxUnchecked, ImBin } from "react-icons/im";
 
-const Todo = ({ title, checked, id, todos, setTodos }) => {
-  const handleCheck = () => {
+const Todo = ({ title, isTodoChecked, id, todos, setTodos }) => {
+  const handleCheckTodo = () => {
     setTodos(
       todos.map((item) => {
         if (item.id === id) {
@@ -12,22 +12,29 @@ const Todo = ({ title, checked, id, todos, setTodos }) => {
       })
     );
   };
-  const handleDelete = () => {
+  const removeTodo = () => {
     setTodos(todos.filter((el) => el.id !== id));
   };
   return (
     <div className="todo">
-      <h2 className={checked ? "checked" : "unchecked"}>{title}</h2>
+      <h2 className={isTodoChecked ? "checked" : "unchecked"}>{title}</h2>
       <div className="btns">
-        {checked ? (
-          <ImCheckboxChecked className="check" onClick={() => handleCheck()} />
+        {isTodoChecked && 
+          <ImBin 
+            className="del" 
+            onClick={() => removeTodo()} 
+          />}
+        {isTodoChecked ? (
+          <ImCheckboxChecked
+            className="check"
+            onClick={() => handleCheckTodo()}
+          />
         ) : (
           <ImCheckboxUnchecked
             className="check"
-            onClick={() => handleCheck()}
+            onClick={() => handleCheckTodo()}
           />
         )}
-        <ImBin className="del" onClick={() => handleDelete()} />
       </div>
     </div>
   );

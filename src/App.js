@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
-import SVG from "./svg";
-import TodoList from "./todolist";
+
+import SVG from "./components/Svg";
+import TodoList from "./components/TodoList";
+import Header from "./components/Header";
+
 import { motion } from 'framer-motion'
 import { textSwim, transitionOne } from './animations'
 
 import "./css/style.css";
-import Header from "./components/Header";
+
 
 function App() {
-  const todoJSON = localStorage.getItem('todos')
-  const data = todoJSON ? JSON.parse(todoJSON) : []
-  const [todos, setTodos] = useState(data);
+  const [todos, setTodos] = useState([]);
   const [todo, setTodo] = useState("");
 
-  const handleAddTodo = (e) => {
+  const addNewTodo = (e) => {
     e.preventDefault();
     if (todo.length > 0) {
       setTodos([...todos, { title: todo, checked: false, id: Date.now() }]);
@@ -22,7 +23,17 @@ function App() {
   };
 
   useEffect(() => {
+    const todoJSON = localStorage.getItem('todos')
+    const data = todoJSON ? JSON.parse(todoJSON) : []
+    if(data.length > 0) {
+      setTodos(data)
+    }
+    console.log('red alert')
+  },[])
+
+  useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos))
+    console.log('green alert')
   },[todos])
 
   return (
@@ -50,7 +61,7 @@ function App() {
                   onChange={(e) => setTodo(e.target.value)}
                   placeholder="Type todo..."
                 />
-                <button onClick={(e) => handleAddTodo(e)}>Add</button>
+                <button onClick={(e) => addNewTodo(e)}>Add</button>
               </div>
               <div className="line"> </div>
               <div className="todos-list">

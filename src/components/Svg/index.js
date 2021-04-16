@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from 'framer-motion'
-import { svgSwim, transitionTwo } from './animations'
+import { svgSwim, transitionTwo } from '../../animations/index'
 
 const SVG = () => (
   <>
