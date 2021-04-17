@@ -6,7 +6,7 @@ Feladatok nyilvántartását elősegítő webalkalmazás, amivel könnyen tudjuk
 
 ![screenshot](https://github.com/Gkristof96/Todo-app/blob/master/todo_mockup_v1.png)
 
-## Features
+## Funkciók
 
 - Teendő hozzáadása
 - Teendő elvégzeté jelölésse
