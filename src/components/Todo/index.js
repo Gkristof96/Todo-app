@@ -19,11 +19,9 @@ const Todo = ({ title, isTodoChecked, id, todos, setTodos }) => {
     <div className="todo-container">
       <h2 className={isTodoChecked ? "checked" : "unchecked"}>{title}</h2>
       <div className="btn-container">
-        {isTodoChecked && 
-          <ImBin 
-            className="del-btn" 
-            onClick={() => removeTodo()} 
-          />}
+        {isTodoChecked && (
+          <ImBin className="del-btn" onClick={() => removeTodo()} />
+        )}
         {isTodoChecked ? (
           <ImCheckboxChecked
             className="check-btn"

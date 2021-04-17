@@ -1,6 +1,6 @@
 import React from "react";
-import { motion } from 'framer-motion'
-import { svgSwim, transitionTwo } from '../../animations/index'
+import { motion } from "framer-motion";
+import { svgSwim, transitionTwo } from "../../animations/index";
 
 const SVG = () => (
   <>
@@ -11,9 +11,9 @@ const SVG = () => (
       width="1155.41"
       height="796.48"
       viewBox="0 0 1155.41 796.48"
-      initial='out'
-      animate='in'
-      exit='out'
+      initial="out"
+      animate="in"
+      exit="out"
       variants={svgSwim}
       transition={transitionTwo}
     >
